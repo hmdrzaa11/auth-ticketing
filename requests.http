@@ -3,6 +3,6 @@ POST http://ticketing.dev/api/users/signup
 Content-Type: application/json
 
 {
-    "email":"asdf@asdf.com",
-    "password":"ha141272"
+    "email":"com",
+    "password":"test123"
 }
