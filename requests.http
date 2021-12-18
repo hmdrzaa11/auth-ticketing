@@ -6,3 +6,8 @@ Content-Type: application/json
     "email":"com",
     "password":"test123"
 }
+
+
+### NOT FOUND
+
+GET http://ticketing.dev/api/users/ggg
