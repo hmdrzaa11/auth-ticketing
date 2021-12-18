@@ -20,6 +20,12 @@ spec:
       containers:
         - name: auth
           image: hmdrzadev/auth
+          env:
+            - name: JWT_KEY #this is the name of env as show up INSIDE OF CONTAINER as process.env
+              valueFrom:
+                secretKeyRef:
+                  name: jwt-secret #this is the name of the object we created as secret
+                  key: JWT_KEY
 
 ---
 apiVersion: v1

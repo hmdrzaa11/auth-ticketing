@@ -1,9 +1,9 @@
 ### SIGNUP
-POST http://ticketing.dev/api/users/signup
+POST https://ticketing.dev/api/users/signup
 Content-Type: application/json
 
 {
-    "email":"test@asdf.com",
+    "email":"asdfasddsaf@asdf.com",
     "password":"test1234"
 }
 
