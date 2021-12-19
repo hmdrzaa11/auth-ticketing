@@ -17,5 +17,9 @@ Content-Type: application/json
 }
 
 
+### SIGN OUT
+POST https://ticketing.dev/api/users/signout
+
+
 ### Current user
 GET https://ticketing.dev/api/users/currentuser
