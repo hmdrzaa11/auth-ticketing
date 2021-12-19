@@ -29,7 +29,10 @@ router.post(
     let user = User.build({ email, password });
     await user.save();
     //generate token
-    let userJwt = jwt.sign({ id: user.id, email: user.email }, "asdf");
+    let userJwt = jwt.sign(
+      { id: user.id, email: user.email },
+      process.env.JWT_KEY!
+    );
     //store in on session
     req.session = { jwt: userJwt }; //do it in this fashion and do not use 'req.session.jwt'
     res.status(201).send(user);
