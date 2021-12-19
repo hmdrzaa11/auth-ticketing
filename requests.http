@@ -3,15 +3,19 @@ POST https://ticketing.dev/api/users/signup
 Content-Type: application/json
 
 {
-    "email":"killer@asdf.com",
+    "email":"werewolf@test.com",
     "password":"test1234"
 }
 
 ### SIGN IN
-POST http://ticketing.dev/api/users/signin
+POST https://ticketing.dev/api/users/signin
 Content-Type: application/json
 
 {
-    "email":"asdf@asdf.com",
-    "password":"sss"
+    "email":"werewolf@test.com",
+    "password":"test1234"
 }
+
+
+### Current user
+GET https://ticketing.dev/api/users/currentuser
