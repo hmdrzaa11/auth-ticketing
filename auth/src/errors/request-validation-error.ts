@@ -2,7 +2,7 @@ import { ValidationError } from "express-validator";
 import { CustomError } from "./custom-error";
 
 export class RequestValidationError extends CustomError {
-  statusCode = 404;
+  statusCode = 400;
   constructor(public errors: ValidationError[]) {
     super("Error connecting to DB");
     //only when we are extending  a built in class
