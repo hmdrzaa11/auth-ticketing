@@ -15,7 +15,9 @@ app.set("trust proxy", true); //because traffic is going to be proxy from ingres
 //and by default express when sees any proxies not going to trust that connection
 
 app.use(json());
-app.use(cookieSession({ signed: false, secure: true }));
+app.use(
+  cookieSession({ signed: false, secure: process.env.NODE_ENV !== "test" })
+);
 
 app.use(currentUserRouter);
 app.use(signinRouter);
